@@ -33,8 +33,10 @@ const init = () => {
   player0Ele.classList.add('player--active');
 };
 
+//function call to initialize initial condition
 init();
 
+//function to switch player chance
 const switchPlayer = () => {
   currentScore = 0;
   document.getElementById(
@@ -86,9 +88,10 @@ btnHold.addEventListener('click', () => {
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
   } else {
+    //Switch player
     switchPlayer();
   }
-  //Switch player
 });
 
+//listener to handle new game button click
 btnNew.addEventListener('click', init);
